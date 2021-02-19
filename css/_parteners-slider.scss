@@ -1,0 +1,29 @@
+.partners {
+  background: $dark;
+  color: $white;
+  font-family: $font__family;
+  padding:15vw 0 2rem 0;
+  p{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .all__partners {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 2rem;
+    .single__partner {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@include under__992 {
+  .partners {
+    .all__partners {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

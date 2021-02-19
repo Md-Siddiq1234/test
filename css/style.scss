@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import 'mixins';
+@import 'nav';
+@import 'selected-work';
+@import 'parteners-slider';
+@import 'about';
+@import 'footer';
+
+header{
+    font-family: $font__family;
+    background: $dark;
+    color: $white;
+    min-height: 100vh;
+    padding: 0 20px;
+
+    .logo__menu__icon{
+        @include flex(space-between,center);
+        padding: 15px 20px 40px 20px;
+
+       & .logo{
+            position: relative;
+            width: 100px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        & .menu__icon{
+            font-weight: bold;
+            padding: 20px;
+
+            span{
+                display: inline-block;
+            }
+
+            span:first-child{
+                border-radius: 50%;
+                background: $pink;
+                width: 10px;
+                height: 10px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    & .banner__text{
+        max-width: 60%;
+        @include flex(flex-start, center);
+        flex-wrap: wrap;
+        padding-left: 1rem;
+        text-align: left;
+        margin-top: 10vh;
+
+        span{
+            font-size: 84px;
+            padding: 0 10px;
+            display: inline-block;
+            font-weight: 700;
+        }
+    }
+
+}
+
+@include under__1460(){
+    header{
+        & .banner__text{
+            span{
+                font-size: 6vw;
+            }
+        }
+    }
+}
+
+@include under__768(){
+    header{
+        & .banner__text{
+            margin-top: 13vw;
+
+            span{
+                font-size: 8vw;
+            }
+        }
+    }
+}
+
+@include under__578(){
+    header{
+        min-height: 70vh;
+        padding: 0; 
+
+        .logo__menu__icon {
+            .logo{
+                width: 90px;
+            }
+        }
+
+        & .banner__text {
+           max-width: 100%;
+        }
+    }
+}
+

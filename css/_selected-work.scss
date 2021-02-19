@@ -1,0 +1,80 @@
+.selected__work__objectives {
+  font-family: $font__family;
+  background: $dark;
+  color: $white;
+}
+
+.work__objectives__title {
+  @include flex();
+  padding: 20px;
+  flex-wrap: wrap;
+
+  h3 {
+    flex-grow: 1;
+  }
+  .view__all {
+    padding-right: 10px;
+    flex-grow: 0.3;
+  }
+}
+
+.selected__work__objectives__bottom {
+  padding: 30px;
+
+  .bottom__description {
+    width: 60%;
+    max-width: 770px;
+    
+    margin: auto;
+    line-height: 1.5;
+    font-weight: 600;
+    padding-top: 2rem;
+  }
+}
+.bottom__title {
+  @include flex(space-between);
+  padding-bottom: 3rem;
+
+  h3 {
+    transform: rotate(270deg);
+    font-weight: 100;
+  }
+
+  &__words__container {
+    flex: 0.9;
+    text-align: left;
+
+    span {
+      display: block;
+      font-size: 6vw;
+    }
+  }
+}
+
+@include under__768 {
+  .bottom__title .bottom__title__words__container {
+    flex: 1;
+
+    span {
+      font-size: 8vw;
+    }
+  }
+}
+
+@include under__578 {
+  .bottom__title {
+    flex-direction: column;
+
+    h3 {
+      padding-bottom: 2rem;
+      transform: rotate(0);
+    }
+    .bottom__title__words__container span {
+      font-size: 9.5vw;
+    }
+  }
+  .selected__work__objectives__bottom .bottom__description {
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+}

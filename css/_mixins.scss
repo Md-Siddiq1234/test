@@ -1,0 +1,46 @@
+$font__family:sans-serif;
+$dark : rgba(0,0,0,1);
+$white : rgba(255,255,255,1);
+$pink : rgb(255,0,255);
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+
+
+@mixin flex( $justify__content: center,$align__items:center){
+    display: flex;
+    justify-content: $justify__content;
+    align-items: $align__items;
+}
+
+@mixin border__bottom__pink{
+    border-bottom: 1px solid $pink;
+}
+
+
+@mixin under__1460{
+    @media(max-width:1460px){
+        @content;
+    }
+}
+@mixin under__992{
+    @media(max-width:992px){
+        @content;
+    }
+}
+@mixin under__768{
+    @media(max-width:768px){
+        @content;
+    }
+}
+@mixin under__578{
+    @media(max-width:578px){
+        @content;
+    }
+}
